@@ -1,1 +1,325 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Roshni-Mart | Online Shopping</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f6fa;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      color: #d1d5db;
+    }
+
+    nav {
+      background: white;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px #ddd;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: bold;
+      padding: 8px 14px;
+    }
+
+    .hero {
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #fef3c7, #dbeafe);
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .search {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+    }
+
+    .search input {
+      flex: 1;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px 0 0 8px;
+      font-size: 16px;
+    }
+
+    .search button {
+      padding: 14px 18px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 30px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 3px 12px #ddd;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #eee;
+    }
+
+    .product h3 {
+      margin: 12px 0 6px;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2563eb;
+      margin: 8px;
+    }
+
+    .buy {
+      display: inline-block;
+      background: #16a34a;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 7px;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
+    .category {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      margin: 5px;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 30px;
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 25px;
+      }
+
+      .product img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Roshni-Mart</h1>
+    <p>Online Shopping & Lifestyle Store</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#clothing">Clothing</a>
+    <a href="#electronics">Electronics</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Welcome to Roshni-Mart</h2>
+    <p>Shop your favourite products at affordable prices.</p>
+
+    <div class="search">
+      <input type="text" id="searchBox" placeholder="Search products...">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Categories</h2>
+
+    <div style="text-align:center;">
+      <a class="category" href="#clothing">👕 Clothing</a>
+      <a class="category" href="#electronics">📱 Electronics</a>
+    </div>
+  </section>
+
+  <section class="section" id="clothing">
+    <h2>👕 Clothing Collection</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=T-Shirt" alt="T-Shirt">
+        <h3>Premium T-Shirt</h3>
+        <p>Comfortable stylish T-shirt</p>
+        <div class="price">৳499</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=Shirt" alt="Shirt">
+        <h3>Men's Shirt</h3>
+        <p>Modern casual shirt</p>
+        <div class="price">৳799</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=Hoodie" alt="Hoodie">
+        <h3>Stylish Hoodie</h3>
+        <p>Comfortable winter hoodie</p>
+        <div class="price">৳999</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="electronics">
+    <h2>📱 Electronics</h2>
+
+    <div class="products">
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=Smart+Watch" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>Modern smart watch</p>
+        <div class="price">৳1,499</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=Earbuds" alt="Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>High quality wireless earbuds</p>
+        <div class="price">৳899</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+      <div class="product">
+        <img src="https://via.placeholder.com/400x300?text=Headphones" alt="Headphones">
+        <h3>Bluetooth Headphones</h3>
+        <p>Clear sound and comfortable design</p>
+        <div class="price">৳1,199</div>
+        <a class="buy" href="#contact">Buy Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>📞 Contact Us</h2>
+
+    <p style="text-align:center; line-height:2;">
+      Order করতে আমাদের সাথে যোগাযোগ করুন।<br>
+      📱 Phone: 01XXXXXXXXX<br>
+      📘 Facebook: Roshni-Mart
+    </p>
+
+    <div style="text-align:center; margin-top:15px;">
+      <a class="buy" href="https://www.facebook.com/" target="_blank">
+        Visit Facebook
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Roshni-Mart. All Rights Reserved.</p>
+    <p>Online Shopping in Bangladesh</p>
+  </footer>
+
+  <script>
+    function searchProducts() {
+      const search = document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase();
+
+      const products = document.querySelectorAll(".product");
+
+      products.forEach(product => {
+        const name = product.innerText.toLowerCase();
+
+        if (name.includes(search)) {
+          product.style.display = "block";
+        } else {
+          product.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
